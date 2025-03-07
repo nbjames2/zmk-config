@@ -20,6 +20,17 @@
 //        sensors = <&left_encoder &right_encoder>;
 //        triggers-per-rotation = <20>;
 //    };
+    behaviors {
+        rpi: require_prior_idle {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&kp>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -27,22 +38,22 @@
         default_layer {
             display-name = "BASE";
             bindings = <
-// |------------------------------------------------------------------------|                       |------------------------------------------------------------------------|
-// |  ESC    |  1        |  2         |  3        |  4         |     5      |                       |  6       |  7       |  8       |  9         |   0          |   `       |
-     &ext_power EP_ON    &kp N1     &kp N2       &kp N3      &kp N4         &kp N5                             &kp N6     &kp N7     &kp N8     &kp N9       &kp N0         &kp GRAVE
-// |---------|-----------|------------|-----------|------------|------------|                       |----------|----------|----------|------------|--------------|-----------|
-// |  TAB    |  Y        |  C         |  L        |  M         |     K      |                       |  Z       |  F       |  U       |  ,         |   '          |   -       |
-     &kp TAB   &kp Y       &kp C        &kp L       &kp M          &kp K                              &kp Z      &kp F      &kp U      &kp COMMA      &kp SQT      &kp MINUS
-// |---------|-----------|------------|-----------|------------|------------|                       |----------|----------|----------|------------|--------------|-----------|
-// |  CAPS   |  I & Ctrl |  S & Super |  R & Alt  |  T & SHIFT |     G      |                       |  P       |N & SHIFT |  E & Alt |  A & Super |   O & Ctrl   |    ;      |
-    &kp CAPS  &mt LCTRL I  &mt LGUI S  &mt LALT R  &mt LSHIFT T    &kp G                             &kp P    &mt RSHIFT N   &mt RALT E  &mt RGUI A  &mt RCTRL O     &kp SEMI
-// |---------|-----------|------------|-----------|------------|------------|----------| |----------|----------|----------|----------|------------|--------------|-----------|
-// |  SHIFT  | Q & Lower |  V & Upper |  W        |  D         |     J      | BTNEXT   | |    Mute  |  B       |  H       |    /     |  . & Upper |   X & Lower  |   =       |
-    &kp LSHFT  &lt 1 Q      &lt 2 V      &kp W       &lt 2 D       &kp J     &bt BT_NXT   &kp C_MUTE   &kp B      &kp H     &kp FSLH    &lt 2 DOT    &lt 1 X    &kp EQUAL
-// |----------------------------------|-----------|------------|------------|----------| |----------|----------|----------|----------|------------|--------------|-----------|
-//                                    |   GUI     |   LOWER    |   DELETE   |   SPACE  | |  ENTER   |  BSPC   |  RAISE    |  GUI     |
-                                        &kp LGUI      &tog 1   &kp C_AC_DEL  &kp SPACE    &kp RET     &kp BSPC   &tog 2     &kp RGUI
-//                                    |------------------------------------------------| |-------------------------------------------|
+// |--------------------------------------------------------------------------|                       |---------------------------------------------------------------------------|
+// |  ESC    |  1         |  2         |  3        |  4          |     5      |                       |  6       |    7       |  8        |  9         |   0          |   `       |
+     &ext_power EP_ON     &kp N1     &kp N2       &kp N3       &kp N4         &kp N5                             &kp N6       &kp N7      &kp N8     &kp N9       &kp N0         &kp GRAVE
+// |---------|------------|------------|-----------|-------------|------------|                       |----------|------------|-----------|------------|--------------|-----------|
+// |  TAB    |  Y         |  C         |  L        |  M          |     K      |                       |  Z       |    F       |  U        |  ,         |   '          |   -       |
+     &kp TAB   &kp Y        &kp C        &kp L       &kp M           &kp K                              &kp Z        &kp F      &kp U       &kp COMMA      &kp SQT      &kp MINUS
+// |---------|------------|------------|-----------|-------------|------------|                       |----------|------------|-----------|------------|--------------|-----------|
+// |  CAPS   |  I & Ctrl  |  S & Super |  R & Alt  |  T & SHIFT  |     G      |                       |  P       |  N & SHIFT |  E & Alt  |  A & Super |   O & Ctrl   |    ;      |
+    &kp CAPS  &rpi LCTRL I &rpi LGUI S  &rpi LALT R &rpi LSHIFT T    &kp G                              &kp P    &rpi RSHIFT N &rpi RALT E &rpi RGUI A  &rpi RCTRL O     &kp SEMI
+// |---------|------------|------------|-----------|-------------|------------|----------| |----------|----------|------------|-----------|------------|--------------|-----------|
+// |  SHIFT  | Q & Lower  |  V & Upper |  W        |  D          |     J      | BTNEXT   | |    Mute  |  B       |    H       |     /     |  . & Upper |   X & Lower  |   =       |
+    &kp LSHFT  &lt 1 Q       &lt 2 V      &kp W       &lt 2 D        &kp J     &bt BT_NXT   &kp C_MUTE   &kp B        &kp H     &kp FSLH    &lt 2 DOT    &lt 1 X    &kp EQUAL
+// |-----------------------------------|-----------|-------------|------------|----------| |----------|----------|------------|-----------|------------|--------------|-----------|
+//                                     |   GUI     |   LOWER     |   DELETE   |   SPACE  | |  ENTER   |  BSPC    |   RAISE    |   GUI     |
+                                         &kp LGUI      &tog 1    &kp C_AC_DEL  &kp SPACE    &kp RET     &kp BSPC     &tog 2      &kp RGUI
+//                                     |-------------------------------------------------| |----------------------------------------------|
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
