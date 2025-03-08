@@ -42,14 +42,14 @@
 // |  ESC    |  1         |  2         |  3        |  4          |     5      |                       |  6       |    7       |  8        |  9         |   0          |   `       |
      &kp ESC     &kp N1     &kp N2       &kp N3       &kp N4         &kp N5                             &kp N6       &kp N7      &kp N8     &kp N9       &kp N0         &kp GRAVE
 // |---------|------------|------------|-----------|-------------|------------|                       |----------|------------|-----------|------------|--------------|-----------|
-// |  TAB    |  Y         |  C         |  L        |  M          |     K      |                       |  Z       |    F       |  U        |  ,         |   '          |   -       |
-     &kp TAB   &kp Y        &kp C        &kp L       &kp M           &kp K                              &kp Z        &kp F      &kp U       &kp COMMA      &kp SQT      &kp MINUS
+// |  TAB    |  Q         |  W         |  E        |  R          |     T      |                       |  Y       |    U       |  I        |  O         |   P          |   -       |
+     &kp TAB   &kp Q        &kp W        &kp E       &kp R           &kp T                              &kp Y        &kp U      &kp I         &kp O        &kp P        &kp MINUS
 // |---------|------------|------------|-----------|-------------|------------|                       |----------|------------|-----------|------------|--------------|-----------|
-// |  CAPS   |  I & Ctrl  |  S & Super |  R & Alt  |  T & SHIFT  |     G      |                       |  P       |  N & SHIFT |  E & Alt  |  A & Super |   O & Ctrl   |    ;      |
-    &kp CAPS  &rpi LCTRL I &rpi LGUI S  &rpi LALT R &rpi LSHIFT T    &kp G                              &kp P    &rpi RSHIFT N &rpi RALT E &rpi RGUI A  &rpi RCTRL O     &kp SEMI
+// |  CAPS   |  A & Ctrl  |  S & Super |  D & Alt  |  F & SHIFT  |     G      |                       |  H       |  J & SHIFT |  K & Alt  |  L & Super |   ; & Ctrl   |    ;      |
+    &kp CAPS  &rpi LCTRL A &rpi LGUI S  &rpi LALT D &rpi LSHIFT F    &kp G                              &kp H    &rpi RSHIFT J &rpi RALT K &rpi RGUI L  &rpi RCTRL SEMI &kp SQT
 // |---------|------------|------------|-----------|-------------|------------|----------| |----------|----------|------------|-----------|------------|--------------|-----------|
-// |  SHIFT  | Q & Lower  |  V & Upper |  W        |  D          |     J      | BTNEXT   | |    Mute  |  B       |    H       |     /     |  . & Upper |   X & Lower  |   =       |
-    &kp LSHFT  &lt 1 Q       &lt 2 V      &kp W       &lt 2 D        &kp J     &bt BT_NXT   &kp C_MUTE   &kp B        &kp H     &kp FSLH    &lt 2 DOT    &lt 1 X    &kp EQUAL
+// |  SHIFT  | Z & Lower  |  X & Upper |  C        |  V          |     B      | BTNEXT   | |    Mute  |  N       |    M       |     ,     |  . & Upper |   / & Lower  |   =       |
+    &kp LSHFT  &lt 1 Z       &lt 2 X      &kp C       &lt 2 V        &kp B     &bt BT_NXT   &kp C_MUTE   &kp N        &kp M     &kp COMMA    &lt 2 DOT    &lt 1 FSLH    &kp EQUAL
 // |-----------------------------------|-----------|-------------|------------|----------| |----------|----------|------------|-----------|------------|--------------|-----------|
 //                                     |   GUI     |   LOWER     |   DELETE   |   SPACE  | |  ENTER   |  BSPC    |   RAISE    |   GUI     |
                                          &kp LGUI      &tog 1    &kp C_AC_DEL  &kp SPACE    &kp RET     &kp BSPC     &tog 2      &kp RGUI
