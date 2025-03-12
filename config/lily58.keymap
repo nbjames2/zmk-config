@@ -38,22 +38,22 @@
         default_layer {
             display-name = "BASE";
             bindings = <
-// |--------------------------------------------------------------------------|                       |---------------------------------------------------------------------------|
-// |  ESC    |  1         |  2         |  3        |  4          |     5      |                       |  6       |    7       |  8        |  9         |   0          |   `       |
-     &kp ESC     &kp N1     &kp N2       &kp N3       &kp N4         &kp N5                             &kp N6       &kp N7      &kp N8     &kp N9       &kp N0         &kp GRAVE
-// |---------|------------|------------|-----------|-------------|------------|                       |----------|------------|-----------|------------|--------------|-----------|
-// |  TAB    |  Q         |  W         |  E        |  R          |     T      |                       |  Y       |    U       |  I        |  O         |   P          |   -       |
-     &kp TAB   &kp Q        &kp W        &kp E       &kp R           &kp T                              &kp Y        &kp U      &kp I         &kp O        &kp P        &kp MINUS
-// |---------|------------|------------|-----------|-------------|------------|                       |----------|------------|-----------|------------|--------------|-----------|
-// |  CAPS   |  A & Ctrl  |  S & Super |  D & Alt  |  F & SHIFT  |     G      |                       |  H       |  J & SHIFT |  K & Alt  |  L & Super |   ; & Ctrl   |    ;      |
-    &kp CAPS  &rpi LCTRL A &rpi LGUI S  &rpi LALT D &rpi LSHIFT F    &kp G                              &kp H    &rpi RSHIFT J &rpi RALT K &rpi RGUI L  &rpi RCTRL SEMI &kp SQT
-// |---------|------------|------------|-----------|-------------|------------|----------| |----------|----------|------------|-----------|------------|--------------|-----------|
-// |  SHIFT  | Z & Lower  |  X & Upper |  C        |  V          |     B      | BTNEXT   | |    Mute  |  N       |    M       |     ,     |  . & Upper |   / & Lower  |   =       |
-    &kp LSHFT  &lt 1 Z       &lt 2 X      &kp C       &lt 2 V        &kp B     &bt BT_NXT   &kp C_MUTE   &kp N        &kp M     &kp COMMA    &lt 2 DOT    &lt 1 FSLH    &kp EQUAL
-// |-----------------------------------|-----------|-------------|------------|----------| |----------|----------|------------|-----------|------------|--------------|-----------|
-//                                     |   GUI     |   LOWER     |   DELETE   |   ENTER  | |  SPACE   |  BSPC    |   RAISE    |   GUI     |
-                                         &kp LGUI      &tog 1    &kp C_AC_DEL    &kp RET    &kp SPACE   &kp BSPC     &tog 2      &kp RGUI
-//                                     |-------------------------------------------------| |----------------------------------------------|
+// |--------------------------------------------------------------------------|                         |---------------------------------------------------------------------------|
+// |  ESC    |  1         |  2         |  3        |  4          |     5      |                         |  6       |    7       |  8        |  9         |   0          |   `       |
+     &kp ESC     &kp N1     &kp N2       &kp N3       &kp N4         &kp N5                               &kp N6       &kp N7      &kp N8     &kp N9       &kp N0         &kp GRAVE
+// |---------|------------|------------|-----------|-------------|------------|                         |----------|------------|-----------|------------|--------------|-----------|
+// |  TAB    |  Q         |  W         |  E        |  R          |     T      |                         |  Y       |    U       |  I        |  O         |   P          |   -       |
+     &kp TAB   &kp Q        &kp W        &kp E       &kp R           &kp T                                &kp Y        &kp U      &kp I         &kp O        &kp P        &kp MINUS
+// |---------|------------|------------|-----------|-------------|------------|                         |----------|------------|-----------|------------|--------------|-----------|
+// |  CAPS   |  A & Ctrl  |  S & Super |  D & Alt  |  F & SHIFT  |     G      |                         |  H       |  J & SHIFT |  K & Alt  |  L & Super |   ; & Ctrl   |    ;      |
+    &kp CAPS  &rpi LCTRL A &rpi LGUI S  &rpi LALT D &rpi LSHIFT F    &kp G                                &kp H    &rpi RSHIFT J &rpi RALT K &rpi RGUI L  &rpi RCTRL SEMI &kp SQT
+// |---------|------------|------------|-----------|-------------|------------|------------| |----------|----------|------------|-----------|------------|--------------|-----------|
+// |  SHIFT  | Z & Lower  |  X & Upper |  C        |  V          |     B      |   BTNEXT   | |    Mute  |  N       |    M       |     ,     |  . & Upper |   / & Lower  |   =       |
+    &kp LSHFT  &lt 1 Z       &lt 2 X      &kp C       &lt 2 V        &kp B      &bt BT_NXT    &kp C_MUTE   &kp N        &kp M     &kp COMMA    &lt 2 DOT    &lt 1 FSLH    &kp EQUAL
+// |-----------------------------------|-----------|-------------|------------|------------| |----------|----------|------------|-----------|------------|--------------|-----------|
+//                                     |   GUI     |   LOWER     |   ENTER    |   DELETE   | |BACKSPACE |  SPACE   |   RAISE    |   GUI     |
+                                         &kp LGUI      &tog 1       &kp RET    &kp C_AC_DEL    &kp BSPC  &kp SPACE     &tog 2      &kp RGUI
+//                                     |---------------------------------------------------| |----------------------------------------------|
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -90,17 +90,17 @@
 // | MediaBack |   MediaPause   |   MediaFwd   |   Volume-    |    Mute    |   Volume+  |                    | DecBright    | IncBright   |        |          |   PRINTSCR    |   ExpPowerTog    |
     &kp C_PREV  &kp C_PLAY_PAUSE   &kp C_NEXT    &kp C_VOL_DN   &kp C_MUTE  &kp C_VOL_UP                       &kp C_BRI_DEC &kp C_BRI_INC   &trans   &trans   &kp PRINTSCREEN  &ext_power EP_TOG
 // |-----------|----------------|--------------|--------------|------------|------------|                    |--------------|-------------|--------|----------|---------------|------------------|
-// |           |                |              |              |            |            |                    |              |             |   "^"  |          |    INS        |      NUMLOCK     |
-      &trans        &trans          &trans         &trans        &trans        &trans                             &trans       &trans      &kp UP     &trans    &kp C_AC_INS       &kp KP_NUM
+// |    TAB    |                |              |              |            |   RESET    |                    |              |             |   "^"  |          |    INS        |      NUMLOCK     |
+      &kp TAB       &trans          &trans         &trans        &trans      &sys_reset                            &trans       &trans      &kp UP     &trans    &kp C_AC_INS       &kp KP_NUM
 // |-----------|----------------|--------------|--------------|------------|------------|                    |--------------|-------------|--------|----------|---------------|------------------|
-// |   Reset   |     OUT TOG    |              |              |            |            |                    |              |    "<-"     |    v   |   "->"   |    PGUP       |      HOME        |
-    &sys_reset    &out OUT_TOG       &trans        &trans         &trans       &trans                             &trans       &kp LEFT    &kp DOWN  &kp RIGHT   &kp PG_UP         &kp HOME
+// |   CTRL    |       A        |     S        |     D        |     F      |  OUT TOG   |                    |              |    "<-"     |    v   |   "->"   |    PGUP       |      HOME        |
+    &kp LCTRL       &kp A           &kp S          &kp D          &kp F     &out OUT_TOG                          &trans       &kp LEFT    &kp DOWN  &kp RIGHT   &kp PG_UP         &kp HOME
 // |-----------|----------------|--------------|--------------|------------|------------|----------| |-------|--------------|-------------|--------|----------|---------------|------------------|
-// |  SFT OFF  |                |              |              |            |            | Clear BT | |       |              |             |        |          |    PGDOWN     |       END        |
-     &soft_off      &trans          &trans        &trans         &trans       &trans     &bt BT_CLR   &trans      &trans        &trans      &trans    &trans     &lt 1 PG_DN        &kp END
+// |   SHIFT   |     Z          |      X       |      C       |    V       |            | Clear BT | |       |              |             |        |          |    PGDOWN     |       END        |
+    &kp LSHIFT      &kp Z            &kp X          &kp C         &kp V       &trans     &bt BT_CLR   &trans      &trans        &trans      &trans    &trans     &lt 1 PG_DN        &kp END
 // |-----------|----------------|--------------|--------------|------------|------------|----------| |-------|--------------|-------------|--------|----------|---------------|------------------|
-//                                             |              |            |            |          | |       |              |             |        |
-                                                   &trans         &trans       &trans      &trans     &trans     &trans        &trans      &trans
+//                                             |     SFT OFF         |            |            |          | |       |              |             |        |
+                                                   &soft_off         &trans       &trans      &trans     &trans     &trans        &trans      &trans
 //                                             |---------------------------------------------------| |---------------------------------------------|
             >;
 
