@@ -51,8 +51,8 @@
 // |  SHIFT  | Z & Lower  |  X & Upper |  C        |  V          |     B      | BTNEXT   | |    Mute  |  N       |    M       |     ,     |  . & Upper |   / & Lower  |   =       |
     &kp LSHFT  &lt 1 Z       &lt 2 X      &kp C       &lt 2 V        &kp B     &bt BT_NXT   &kp C_MUTE   &kp N        &kp M     &kp COMMA    &lt 2 DOT    &lt 1 FSLH    &kp EQUAL
 // |-----------------------------------|-----------|-------------|------------|----------| |----------|----------|------------|-----------|------------|--------------|-----------|
-//                                     |   GUI     |   LOWER     |   DELETE   |   SPACE  | |  ENTER   |  BSPC    |   RAISE    |   GUI     |
-                                         &kp LGUI      &tog 1    &kp C_AC_DEL  &kp SPACE    &kp RET     &kp BSPC     &tog 2      &kp RGUI
+//                                     |   GUI     |   LOWER     |   DELETE   |   ENTER  | |  SPACE   |  BSPC    |   RAISE    |   GUI     |
+                                         &kp LGUI      &tog 1    &kp C_AC_DEL    &kp RET    &kp SPACE   &kp BSPC     &tog 2      &kp RGUI
 //                                     |-------------------------------------------------| |----------------------------------------------|
             >;
 
