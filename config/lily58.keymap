@@ -72,8 +72,8 @@
 // |   "%"   |      "^"       |     "&"      |      "*"      |      "_"        |  "["   |                    |     "]"     |        "="         |       4       |       5       |        6       |       "+"       |
     &kp PRCNT &rpi LCTRL CARET &rpi LGUI AMPS &rpi LALT ASTRK &rpi LSHIFT UNDER &kp LBKT                        &kp RBKT    &rpi RSHIFT KP_EQUAL &rpi RALT KP_N4 &rpi RGUI KP_N5 &rpi RCTRL KP_N6    &kp KP_PLUS
 // |---------|---------------|--------------|----------------|-----------------|--------|--------|  |--------|-------------|--------------------|---------------|---------------|----------------|-----------------|
-// |   "\"   |    Undo        |     Cut      |     Copy      |      Paste      | curly  |   "<"  |  |  ">"   |   curly     |        "~"         |       1       |       2       |        3       |       "*"       |
-    &kp BSLH    &lt 1 K_UNDO    &lt 2 K_CUT     &kp K_COPY       &kp K_PASTE    &kp LBRC  &kp LT      &kp RT    &kp RBRC         &kp TILDE         &kp KP_N1       &lt 2 KP_N2     &lt 1 KP_N3     &kp KP_MULTIPLY
+// |   "\"   |    Undo        |     Cut      |     Copy      |      Paste      |   "{"  |   "<"  |  |  ">"   |     "}"     |        "~"         |       1       |       2       |        3       |       "*"       |
+    &kp BSLH    &lt 1 K_UNDO    &lt 2 K_CUT     &kp K_COPY       &kp K_PASTE    &kp LBRC  &kp LT      &kp GT    &kp RBRC         &kp TILDE         &kp KP_N1       &lt 2 KP_N2     &lt 1 KP_N3     &kp KP_MULTIPLY
 // |-----------------------------|----------|----------------|-----------------|--------|--------|  |--------|-------------|--------------------|---------------|---------------|----------------|-----------------|
 //                                          |                |                 |        |        |  |        |             |                    |      0        |
                                                  &trans            &trans        &trans   &trans      &trans     &trans           &trans           &kp KP_N0
