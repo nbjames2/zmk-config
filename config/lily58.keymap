@@ -36,12 +36,12 @@
         compatible = "zmk,combos";
         combo_symbols {
             timeout-ms = <50>;
-            key-positions = <54 43>;
+            key-positions = <53 42>;
             bindings = <&tog 1>;
         };
         combo_arrows {
             timeout-ms = <50>;
-            key-positions = <55 44>;
+            key-positions = <54 43>;
             bindings = <&tog 2>;
         };
     };
@@ -53,17 +53,17 @@
             display-name = "BASE";
             bindings = <
 // |--------------------------------------------------------------------------|                         |---------------------------------------------------------------------------|
-// |  ESC    |  1         |  2         |  3        |  4          |     5      |                         |  6       |    7       |  8        |  9         |   0          |   RAISE   |
-     &kp ESC     &kp N1     &kp N2       &kp N3       &kp N4         &kp N5                               &kp N6       &kp N7      &kp N8     &kp N9       &kp N0         &tog 2
+// |  ESC    |  1         |  2         |  3        |  4          |     5      |                         |  6       |    7       |  8        |  9         |   0          |    "\"    |
+     &kp ESC     &kp N1     &kp N2       &kp N3       &kp N4         &kp N5                               &kp N6       &kp N7      &kp N8     &kp N9       &kp N0          &kp BSLH
 // |---------|------------|------------|-----------|-------------|------------|                         |----------|------------|-----------|------------|--------------|-----------|
-// |  TAB    |  Q         |  W         |  E        |  R          |     T      |                         |  Y       |    U       |  I        |  O         |   P          |    =      |
-     &kp TAB   &kp Q        &kp W        &kp E       &kp R           &kp T                                &kp Y        &kp U      &kp I         &kp O        &kp P        &kp EQUAL
+// |  TAB    |  Q         |  W         |  E        |  R          |     T      |                         |  Y       |    U       |  I        |  O         |   P          |    -      |
+     &kp TAB   &kp Q        &kp W        &kp E       &kp R           &kp T                                &kp Y        &kp U      &kp I         &kp O        &kp P        &kp MINUS
 // |---------|------------|------------|-----------|-------------|------------|                         |----------|------------|-----------|------------|--------------|-----------|
 // |  CAPS   |  A & Ctrl  |  S & Super |  D & Alt  |  F & SHIFT  |     G      |                         |  H       |  J & SHIFT |  K & Alt  |  L & Super |   ; & Ctrl   |    '      |
     &kp CAPS  &rpi LCTRL A &rpi LGUI S  &rpi LALT D &rpi LSHIFT F    &kp G                                &kp H    &rpi RSHIFT J &rpi RALT K &rpi RGUI L  &rpi RCTRL SEMI &kp SQT
 // |---------|------------|------------|-----------|-------------|------------|------------| |----------|----------|------------|-----------|------------|--------------|-----------|
-// |  LOWER  | Z & Lower  |  X & Upper |  C        |  V          |     B      |     "["    | |    "]"   |  N       |    M       |     ,     |  . & Upper |   / & Lower  |    -      |
-   &kp LSHIFT  &lt 1 Z       &lt 2 X      &kp C         &kp V        &kp B       &kp LBKT      &kp RBKT   &kp N        &kp M     &kp COMMA    &lt 2 DOT    &lt 1 FSLH    &kp MINUS
+// |  LOWER  | Z & Lower  |  X & Upper |  C        |  V          |     B      |     "["    | |    "]"   |  N       |    M       |     ,     |  . & Upper |   / & Lower  |    =      |
+   &kp LSHIFT  &lt 1 Z       &lt 2 X      &kp C         &kp V        &kp B       &kp LBKT      &kp RBKT   &kp N        &kp M     &kp COMMA    &lt 2 DOT    &lt 1 FSLH    &kp EQUAL
 // |-----------------------------------|-----------|-------------|------------|------------| |----------|----------|------------|-----------|------------|--------------|-----------|
 //                                     |  Page Up  |    HOME     |   DELETE    |   ENTER   | |   SPACE  | BACKSPACE|   END    |  Page Down  |
                                          &kp PG_UP     &kp HOME     &kp C_AC_DEL    &kp RET     &kp SPACE   &kp BSPC   &kp END   &kp PG_DN
@@ -80,13 +80,14 @@
 // |    F1   |       F2       |      F3      |      F4       |      F5         |    F6     |                    |     F7      |         F8         |      F9       |      F10      |       F11      |       F12       |
       &kp F1       &kp F2          &kp F3         &kp F4          &kp F5           &kp F6                          &kp F7           &kp F8             &kp F9          &kp F10          &kp F11          &kp F12
 // |---------|---------------|--------------|----------------|-----------------|-----------|                    |-------------|--------------------|---------------|---------------|----------------|-----------------|
-// |         |               |              |   MV WKSPC UP  |                 |MV APP LEFT|                    | MV APP RIGHT|         7          |       8       |       9       |      "+"       |       "="       |
-     &trans       &trans         &trans      &kp RG(RC(RS(UP)))    &trans       &kp LG(LS(LEFT))                 &kp RG(RS(RIGHT))   &kp KP_N7       &kp KP_N8        &kp KP_N9       &kp KP_PLUS      &kp KP_EQUAL
+// |         |               |              |   MV WKSPC UP  |                 |MV APP LEFT|                    | MV APP RIGHT|         7          |       8       |       9       |      "+"       |       "-"       |
+     &trans       &trans         &trans      &kp RG(RC(RS(UP)))    &trans       &kp LG(LS(LEFT))                 &kp RG(RS(RIGHT))   &kp KP_N7       &kp KP_N8        &kp KP_N9       &kp KP_PLUS      &kp KP_MINUS
 // |---------|---------------|--------------|----------------|-----------------|-----------|                    |-------------|--------------------|---------------|---------------|----------------|-----------------|
 // |         |               | MV WKSPC LEFT| MV WKSPC DOWN  | MV WKSPC RIGHT  |PREV WKSPC |                    | NEXT WKSPC  |         4         |       5       |       6       |       "*"       |       "`"       |
+    &trans    &trans  &rpi LGUI RG(RC(RS(LEFT))) &rpi LALT RG(RC(RS(DOWN))) &rpi LSHIFT RG(RC(RS(RIGHT))) &kp LG(LC(LEFT)) &kp RG(RC(RIGHT)) &rpi RSHIFT KP_N4 &rpi RALT KP_N5 &rpi RGUI KP_N6 &rpi RCTRL KP_MULTIPLY &kp GRAVE
 // |---------|---------------|--------------|----------------|-----------------|-----------|--------|  |--------|-------------|--------------------|---------------|---------------|----------------|-----------------|
-// |         |               |              |                |                 |           |        |  |        |             |         1          |      2        |      3        |       "/"      |       "-"      |
-     &trans       &trans          &trans         &trans            &trans          &trans     &trans      &trans      &trans         &kp KP_N1         &kp KP_N2       &lt 2 KP_N3   &lt 1 KP_DIVIDE     &kp KP_MINUS
+// |         |               |              |                |                 |           |        |  |        |             |         1          |      2        |      3        |       "/"      |       "="      |
+     &trans       &trans          &trans         &trans            &trans          &trans     &trans      &trans      &trans         &kp KP_N1         &kp KP_N2       &lt 2 KP_N3   &lt 1 KP_DIVIDE     &kp KP_EQUAL
 // |-------------------------|--------------|----------------|-----------------|-----------|--------|  |--------|-------------|--------------------|---------------|---------------|----------------|-----------------|
 //                                          |                |                 |           |        |  |        |             |          0         |      "."      |
                                                  &trans            &trans          &trans    &trans      &trans     &trans           &kp KP_N0        &kp KP_DOT
