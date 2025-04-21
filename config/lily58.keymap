@@ -32,6 +32,20 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+        combo_symbols {
+            timeout-ms = <50>;
+            key-positions = <54 43>;
+            bindings = <&tog 1>;
+        };
+        combo_arrows {
+            timeout-ms = <50>;
+            key-positions = <55 44>;
+            bindings = <&tog 2>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -49,7 +63,7 @@
     &kp CAPS  &rpi LCTRL A &rpi LGUI S  &rpi LALT D &rpi LSHIFT F    &kp G                                &kp H    &rpi RSHIFT J &rpi RALT K &rpi RGUI L  &rpi RCTRL SEMI &kp SQT
 // |---------|------------|------------|-----------|-------------|------------|------------| |----------|----------|------------|-----------|------------|--------------|-----------|
 // |  LOWER  | Z & Lower  |  X & Upper |  C        |  V          |     B      |     "["    | |    "]"   |  N       |    M       |     ,     |  . & Upper |   / & Lower  |    -      |
-     &tog 1    &lt 1 Z       &lt 2 X      &kp C         &kp V        &kp B       &kp LBKT      &kp RBKT   &kp N        &kp M     &kp COMMA    &lt 2 DOT    &lt 1 FSLH    &kp MINUS
+   &kp LSHIFT  &lt 1 Z       &lt 2 X      &kp C         &kp V        &kp B       &kp LBKT      &kp RBKT   &kp N        &kp M     &kp COMMA    &lt 2 DOT    &lt 1 FSLH    &kp MINUS
 // |-----------------------------------|-----------|-------------|------------|------------| |----------|----------|------------|-----------|------------|--------------|-----------|
 //                                     |  Page Up  |    HOME     |   DELETE    |   ENTER   | |   SPACE  | BACKSPACE|   END    |  Page Down  |
                                          &kp PG_UP     &kp HOME     &kp C_AC_DEL    &kp RET     &kp SPACE   &kp BSPC   &kp END   &kp PG_DN
@@ -70,7 +84,6 @@
      &trans       &trans         &trans      &kp RG(RC(RS(UP)))    &trans       &kp LG(LS(LEFT))                 &kp RG(RS(RIGHT))   &kp KP_N7       &kp KP_N8        &kp KP_N9       &kp KP_PLUS      &kp KP_EQUAL
 // |---------|---------------|--------------|----------------|-----------------|-----------|                    |-------------|--------------------|---------------|---------------|----------------|-----------------|
 // |         |               | MV WKSPC LEFT| MV WKSPC DOWN  | MV WKSPC RIGHT  |PREV WKSPC |                    | NEXT WKSPC  |         4         |       5       |       6       |       "*"       |       "`"       |
-    &trans    &trans  &rpi LGUI RG(RC(RS(LEFT))) &rpi LALT RG(RC(RS(DOWN))) &rpi LSHIFT RG(RC(RS(RIGHT))) &kp LG(LC(LEFT)) &kp RG(RC(RIGHT)) &rpi RSHIFT KP_N4 &rpi RALT KP_N5 &rpi RGUI KP_N6 &rpi RCTRL KP_MULTIPLY &kp GRAVE
 // |---------|---------------|--------------|----------------|-----------------|-----------|--------|  |--------|-------------|--------------------|---------------|---------------|----------------|-----------------|
 // |         |               |              |                |                 |           |        |  |        |             |         1          |      2        |      3        |       "/"      |       "-"      |
      &trans       &trans          &trans         &trans            &trans          &trans     &trans      &trans      &trans         &kp KP_N1         &kp KP_N2       &lt 2 KP_N3   &lt 1 KP_DIVIDE     &kp KP_MINUS
@@ -96,8 +109,8 @@
 // |   CTRL    |       A        |     S        |     D        |     F      |     G      |                       |     OUT TOG      |       "<-"       |          v         |         "->"        |   DecBright   |     IncBright    |
     &kp LCTRL       &kp A            &kp S          &kp D          &kp F         &kp G                             &out OUT_TOG         &kp LEFT            &kp DOWN             &kp RIGHT        &kp C_BRI_DEC    &kp C_BRI_INC
 // |-----------|----------------|--------------|--------------|------------|------------|----------| |----------|------------------|------------------|--------------------|---------------------|---------------|------------------|
-// |   SHIFT   |     Z          |      X       |      C       |    V       |     B      |          | |          |                  |                  |                    |                     |               |                  |
-    &kp LSHIFT      &kp Z            &kp X          &kp C         &kp V       &kp B        &trans      &trans        &trans              &trans             &trans               &trans            &trans           &trans
+// |           |     Z          |      X       |      C       |    V       |     B      |          | |          |                  |                  |                    |                     |               |                  |
+      &trans      &kp Z            &kp X          &kp C         &kp V       &kp B        &trans      &trans        &trans              &trans             &trans               &trans            &trans           &trans
 // |-----------|----------------|--------------|--------------|------------|------------|----------| |----------|------------------|------------------|--------------------|---------------------|---------------|------------------|
 //                                             |     CTRL     |   Super    |   Alt      |   ENTER  | |   SHIFT  |       Alt        |      Super       |       CTRL         |
                                                    &kp LCTRL     &kp LGUI     &kp LALT     &trans     &kp RSHIFT      &kp RALT          &kp RGUI            &kp RCTRL
