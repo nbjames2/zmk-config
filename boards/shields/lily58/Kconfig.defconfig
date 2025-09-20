@@ -23,16 +23,4 @@ config BT_MAX_CONN
 config BT_MAX_PAIRED
     default 6
 
-# Disable display for dongle
-config ZMK_DISPLAY
-    default n
-
-# Force disable display
-config DISPLAY
-    default n
-
-# Disable LVGL completely
-config LVGL
-    default n
-
 endif
