@@ -90,8 +90,8 @@
             display-name = "ARROWS";
             bindings = <
 // |------------------------------------------------------------------------------------|                       |--------------------------------------------------------------------------------------|
-// | MediaBack |   MediaPause   |   MediaFwd   |   Volume-    |    Mute    |   Volume+  |                       |            | Clear BT |   BTNEXT  |           |      SCREENSHOT       |    RAISE     |
-    &kp C_PREV  &kp C_PLAY_PAUSE   &kp C_NEXT    &kp C_VOL_DN   &kp C_MUTE  &kp C_VOL_UP                            &trans    &bt BT_CLR  &bt BT_NXT   &trans    &kp RG(RS(PRINTSCREEN))     &tog 2
+// | MediaBack |   MediaPause   |   MediaFwd   |   Volume-    |    Mute    |   Volume+  |                       |   SFT OFF  | Clear BT |   BTNEXT  |           |      SCREENSHOT       |    RAISE     |
+    &kp C_PREV  &kp C_PLAY_PAUSE   &kp C_NEXT    &kp C_VOL_DN   &kp C_MUTE  &kp C_VOL_UP                          &soft_off   &bt BT_CLR  &bt BT_NXT   &trans    &kp RG(RS(PRINTSCREEN))     &tog 2
 // |-----------|----------------|--------------|--------------|------------|------------|                       |------------|----------|-----------|-----------|-----------------------|--------------|
 // |    TAB    |       Q        |     W        |      E       |     R      |     T      |                       |   RESET    |          |    "^"    |           |         INS           |    NUMLOCK   |
       &kp TAB       &kp Q            &kp W          &kp E         &kp R         &kp T                             &sys_reset   &trans      &kp UP      &trans          &kp C_AC_INS        &kp KP_NUM
@@ -99,8 +99,8 @@
 // |   CTRL    |       A        |     S        |     D        |     F      |     G      |                       |   OUT TOG  |   "<-"   |     v     |   "->"    |      DecBright        |  IncBright   |
     &kp LCTRL       &kp A            &kp S          &kp D          &kp F         &kp G                           &out OUT_TOG  &kp LEFT   &kp DOWN    &kp RIGHT      &kp C_BRI_DEC        &kp C_BRI_INC
 // |-----------|----------------|--------------|--------------|------------|------------|----------| |----------|------------|----------|-----------|-----------|-----------------------|--------------|
-// |   SHIFT   |     Z          |      X       |      C       |    V       |     B      |   SPACE  | |          |            |          |           |           |                       |   SFT OFF    |
-    &kp LSHIFT      &kp Z            &kp X          &kp C         &kp V       &kp B       &kp SPACE     &trans      &trans      &trans      &trans       &trans          &trans             &soft_off
+// |   SHIFT   |     Z          |      X       |      C       |    V       |     B      |   SPACE  | |          |            |          |           |           |                       |              |
+    &kp LSHIFT      &kp Z            &kp X          &kp C         &kp V       &kp B       &kp SPACE     &trans      &trans      &trans      &trans       &trans          &trans              &trans
 // |-----------|----------------|--------------|--------------|------------|------------|----------| |----------|------------|----------|-----------|-----------|-----------------------|--------------|
 //                                             |     CTRL     |   Super    |   Alt      |   ENTER  | |   SHIFT  |   Alt      |  Super   |    CTRL   |
                                                    &kp LCTRL     &kp LGUI     &kp LALT     &trans     &kp RSHIFT  &kp RALT    &kp RGUI    &kp RCTRL
