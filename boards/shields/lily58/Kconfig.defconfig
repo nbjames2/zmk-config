@@ -27,4 +27,12 @@ config BT_MAX_PAIRED
 config ZMK_DISPLAY
     default n
 
+# Force disable display
+config DISPLAY
+    default n
+
+# Disable LVGL completely
+config LVGL
+    default n
+
 endif
