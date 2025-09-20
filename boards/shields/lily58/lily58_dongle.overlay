@@ -1,9 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
-&kata0510_lily58_layout {
-    transform = <&default_transform>;
-};
-
 / {
     physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
