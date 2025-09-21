@@ -1,20 +1,13 @@
-if SHIELD_LILY58_LEFT || SHIELD_LILY58_RIGHT
-
-config ZMK_SPLIT
-    default y
-
-endif
-
 if SHIELD_LILY58_DONGLE
 
 # Max 16 characters in keyboard name
 config ZMK_KEYBOARD_NAME
     default "Lily58"
 
-config ZMK_SPLIT_ROLE_CENTRAL
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default y
 
-config ZMK_SPLIT
+config ZMK_USB
     default y
 
 # Set this to the number of peripherals your dongle will have.
@@ -29,5 +22,15 @@ config BT_MAX_CONN
 # Set this to the same number as BT_MAX_CONN
 config BT_MAX_PAIRED
     default 6
+
+endif
+
+if SHIELD_LILY58_LEFT || SHIELD_LILY58_RIGHT || SHIELD_LILY58_DONGLE
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_BLE
+    default y
 
 endif
