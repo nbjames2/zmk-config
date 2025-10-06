@@ -1,0 +1,26 @@
+if SHIELD_LILY58_DONGLE
+
+config ZMK_KEYBOARD_NAME
+    default "NicksSplit"
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+    default y
+
+# Increase BT connections for dongle (needs to connect to both halves)
+if ZMK_BLE
+
+config BT_MAX_CONN
+    default 5
+
+config BT_MAX_PAIRED
+    default 5
+
+endif # ZMK_BLE
+
+endif # SHIELD_LILY58_DONGLE
