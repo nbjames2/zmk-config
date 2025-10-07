@@ -29,3 +29,5 @@ config BT_MAX_CONN
 # Set this to the same number as BT_MAX_CONN
 config BT_MAX_PAIRED
     default 6
+
+endif
