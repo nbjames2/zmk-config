@@ -1,4 +1,4 @@
-if SHIELD_LILY58_LEFT || SHIELD_LILY58_DONGLE
+SHIELD_LILY58_DONGLE
 
 config ZMK_KEYBOARD_NAME
     default "Lily58"
@@ -6,9 +6,12 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
+config ZMK_SPLIT
+    default y
+
 endif
 
-if SHIELD_LILY58_LEFT || SHIELD_LILY58_RIGHT || SHIELD_LILY58_DONGLE
+if SHIELD_LILY58_LEFT || SHIELD_LILY58_RIGHT
 
 config ZMK_SPLIT
     default y
@@ -20,14 +23,6 @@ config I2C
 
 config SSD1306
     default y
-
-if SHIELD_LILY58_DONGLE
-
-choice ZMK_DISPLAY_WORK_QUEUE
-    default ZMK_DISPLAY_WORK_QUEUE_DEDICATED
-endchoice
-
-endif
 
 endif # ZMK_DISPLAY
 
