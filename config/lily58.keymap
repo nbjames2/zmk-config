@@ -57,16 +57,16 @@
      &kp ESC     &kp N1     &kp N2       &kp N3       &kp N4         &kp N5                               &kp N6       &kp N7      &kp N8     &kp N9       &kp N0          &kp BSLH
 // |---------|------------|------------|-----------|-------------|------------|                         |----------|------------|-----------|------------|--------------|-----------|
 // |  TAB    |  Q         |  W         |  E        |  R          |     T      |                         |  Y       |    U       |  I        |  O         |   P          |    -      |
-     &kp TAB   &kp Q        &kp W        &kp E       &kp R           &kp T                                &kp Y        &kp U      &kp I         &kp O        &kp P        &kp MINUS
+     &kp TAB    &kp Q        &kp W        &kp E       &kp R           &kp T                                &kp Y        &kp U      &kp I         &kp O        &kp P        &kp MINUS
 // |---------|------------|------------|-----------|-------------|------------|                         |----------|------------|-----------|------------|--------------|-----------|
-// |  CAPS   |  A & Ctrl  |  S & Super |  D & Alt  |  F & SHIFT  |     G      |                         |  H       |  J & SHIFT |  K & Alt  |  L & Super |   ; & Ctrl   |    '      |
-    &kp CAPS  &rpi LCTRL A &rpi LGUI S  &rpi LALT D &rpi LSHIFT F    &kp G                                &kp H    &rpi RSHIFT J &rpi RALT K &rpi RGUI L  &rpi RCTRL SEMI &kp SQT
+// |  CAPS   |  A         |  S         |  D        |  F          |     G      |                         |  H       |  J         |  K        |  L         |   ;          |    '      |
+    &kp CAPS    &kp A        &kp S        &kp D       &kp F          &kp G                                &kp H    &rpi RSHIFT J &rpi RALT K &rpi RGUI L  &rpi RCTRL SEMI &kp SQT
 // |---------|------------|------------|-----------|-------------|------------|------------| |----------|----------|------------|-----------|------------|--------------|-----------|
-// |  SHIFT  | Z & Lower  |  X & Upper |  C        |  V          |     B      |     "["    | |    "]"   |  N       |    M       |     ,     |  . & Upper |   / & Lower  |    =      |
-   &kp LSHIFT  &lt 1 Z       &lt 2 X      &kp C         &kp V        &kp B       &kp LBKT      &kp RBKT   &kp N        &kp M     &kp COMMA    &lt 2 DOT    &lt 1 FSLH    &kp EQUAL
+// |  SHIFT  | Z & Lower  |  X & Upper |  C        |  V          |     B      |     "["    | |    "]"   |  N       |    M       |     ,     |  . & Upper |   / & Lower  |  Shift    |
+   &kp LSHIFT  &lt 1 Z       &lt 2 X      &kp C         &kp V        &kp B       &kp LBKT      &kp RBKT   &kp N        &kp M     &kp COMMA    &lt 2 DOT    &lt 1 FSLH    &kp RSHIFT
 // |-----------------------------------|-----------|-------------|------------|------------| |----------|----------|------------|-----------|------------|--------------|-----------|
-//                                     |  Page Up  |    HOME     |   DELETE   |   Enter    | |   SPACE  | BACKSPACE|   END    |  Page Down  |
-                                         &kp PG_UP     &kp HOME   &kp C_AC_DEL   &kp RET      &kp SPACE   &kp BSPC   &kp END    &kp PG_DN
+//                                     |  CTRL     |    SUPER    |   DELETE   |   SPACE    | | ENTER    | BACKSPACE|   ALT    |  CTRL       |
+                                         &kp LCRTL     &kp LGUI   &kp C_AC_DEL   &kp SPACE      &kp RET   &kp BSPC   &kp RALT    &kp RCTRL
 //                                     |---------------------------------------------------| |----------------------------------------------|
             >;
 
@@ -76,22 +76,22 @@
         lower_layer {
             display-name = "SYMBOLS";
             bindings = <
-// |----------------------------------------------------------------------------------------------------|                    |-----------------------------------------------------------------------------------------------------|
-// |   F1    |  F2  |            F3            |           F4           |      F5         |    F6       |                   |     F7      |         F8         |      F9       |      F10      |       F11      |       F12       |
-     &kp F1   &kp F2          &kp F3                     &kp F4              &kp F5           &kp F6                          &kp F7           &kp F8             &kp F9          &kp F10          &kp F11          &kp F12
-// |---------|------|--------------------------|------------------------|-----------------|-------------|                   |-------------|--------------------|---------------|---------------|----------------|-----------------|
-// |         |      |      MV APP LEFT         |       MV APP UP        |  MV APP DOWN    | MV APP RIGHT|                   |             |         7          |       8       |       9       |      "+"       |       "-"       |
-      &trans  &trans    &kp LG(LS(LEFT))            &kp RG(RS(UP))      &kp RG(RS(DOWN))   &kp RG(RS(RIGHT))                    &trans          &kp KP_N7       &kp KP_N8        &kp KP_N9       &kp KP_PLUS      &kp KP_MINUS
-// |---------|------|--------------------------|------------------------|-----------------|-------------|                   |-------------|--------------------|---------------|---------------|----------------|-----------------|
-// |         |      |      MV WKSPC LEFT       |      MV WKSPC UP       |  MV WKSPC DOWN  |MV WKSPC RIGHT|                  |             |         4          |       5       |       6       |      "*"       |       "`"       |
-      &trans  &trans &rpi LGUI RG(RC(RS(LEFT))) &rpi LALT RG(RC(RS(UP))) &rpi LSHIFT RG(RC(RS(DOWN))) &rpi LSHIFT RG(RC(RS(RIGHT))) &trans      &rpi RSHIFT KP_N4   &rpi RALT KP_N5 &rpi RGUI KP_N6  &rpi RCTRL KP_MULTIPLY &kp GRAVE
-// |---------|------|--------------------------|------------------------|-----------------|-------------|--------|  |--------|-------------|--------------------|---------------|---------------|----------------|-----------------|
-// | SFT OFF |      |       PREV COLUMN      |     PREV WORKSPACE       |    NEXT WKSPC   | NEXT COLUMN |        |  |        |             |         1          |      2        |      3        |       "/"      |       "="       |
-    &soft_off &trans        &kp LG(LEFT)               &kp LG(UP)          &kp RG(DOWN)    &kp LG(RIGHT)  &trans      &trans    &trans           &kp KP_N1         &kp KP_N2       &lt 2 KP_N3   &lt 1 KP_DIVIDE     &kp KP_EQUAL
-// |---------|------|--------------------------|------------------------|-----------------|-------------|--------|  |--------|-------------|--------------------|---------------|---------------|----------------|-----------------|
-//                                             |                        |                 |             |        |  |        |             |          0         |      "."      |
-                                                         &trans               &trans           &trans    &trans      &trans     &trans           &kp KP_N0        &kp KP_DOT
-//                                             |-----------------------------------------------------------------|  |-----------------------------------------------------------|
+// |-------------------------------------------------------------------------------------------------------------|                   |-----------------------------------------------------------------------------------------------------|
+// |   F1    |  F2           |            F3            |           F4           |      F5         |    F6       |                   |     F7      |         F8         |      F9       |      F10      |       F11      |       F12       |
+     &kp F1   &kp F2             &kp F3                     &kp F4              &kp F5           &kp F6                          &kp F7           &kp F8             &kp F9          &kp F10          &kp F11          &kp F12
+// |---------|---------------|--------------------------|------------------------|-----------------|-------------|                   |-------------|--------------------|---------------|---------------|----------------|-----------------|
+// |         | Close Window  |      MV APP LEFT         |       MV APP UP        |  MV APP DOWN    | MV APP RIGHT|                   |             |         7          |       8       |       9       |      "+"       |       "="       |
+      &trans  &rpi LGUI RS(Q)    &kp LG(LS(LEFT))            &kp RG(RS(UP))      &kp RG(RS(DOWN))   &kp RG(RS(RIGHT))                    &trans          &kp KP_N7       &kp KP_N8        &kp KP_N9       &kp KP_PLUS      &kp KP_EQUAL
+// |---------|---------------|--------------------------|------------------------|-----------------|-------------|                   |-------------|--------------------|---------------|---------------|----------------|-----------------|
+// |         |               |      MV WKSPC LEFT       |      MV WKSPC UP       |  MV WKSPC DOWN  |MV WKSPC RIGHT|                  |             |         4          |       5       |       6       |      "*"       |       "`"       |
+      &trans  &trans  &rpi LGUI RG(RC(RS(LEFT))) &rpi LALT RG(RC(RS(UP))) &rpi LSHIFT RG(RC(RS(DOWN))) &rpi LSHIFT RG(RC(RS(RIGHT)))     &trans     &rpi RSHIFT KP_N4   &rpi RALT KP_N5 &rpi RGUI KP_N6  &rpi RCTRL KP_MULTIPLY &kp GRAVE
+// |---------|---------------|--------------------------|------------------------|-----------------|-------------|--------|  |--------|------------|--------------------|---------------|---------------|----------------|-----------------|
+// |         |               |       PREV COLUMN        |    PREV WORKSPACE      |    NEXT WKSPC   | NEXT COLUMN |        |  |        |            |         1          |      2        |      3        |       "/"      |                 |
+      &trans     &trans              &kp LG(LEFT)               &kp LG(UP)          &kp RG(DOWN)    &kp LG(RIGHT)  &trans      &trans    &trans          &kp KP_N1         &kp KP_N2       &lt 2 KP_N3   &lt 1 KP_DIVIDE     &trans
+// |---------|---------------|--------------------------|------------------------|-----------------|-------------|--------|  |--------|------------|--------------------|---------------|---------------|----------------|-----------------|
+//                                                      |                        |                 |             |        |  |        |            |          0         |      "."      |
+                                                                   &trans               &trans           &trans    &trans      &trans     &trans          &kp KP_N0        &kp KP_DOT
+//                                                      |-----------------------------------------------------------------|  |----------------------------------------------------------|
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -100,22 +100,22 @@
         raise_layer {
             display-name = "ARROWS";
             bindings = <
-// |------------------------------------------------------------------------------------|                       |--------------------------------------------------------------------------------------|
-// | MediaBack |   MediaPause   |   MediaFwd   |   Volume-    |    Mute    |   Volume+  |                       |   SFT OFF  | Clear BT |   BTNEXT  |           |      SCREENSHOT       |    RAISE     |
-    &kp C_PREV  &kp C_PLAY_PAUSE   &kp C_NEXT    &kp C_VOL_DN   &kp C_MUTE  &kp C_VOL_UP                          &soft_off   &bt BT_CLR  &bt BT_NXT   &trans    &kp RG(RS(PRINTSCREEN))     &tog 2
-// |-----------|----------------|--------------|--------------|------------|------------|                       |------------|----------|-----------|-----------|-----------------------|--------------|
-// |    TAB    |       Q        |     W        |      E       |     R      |     T      |                       |   RESET    |          |    "^"    |           |         INS           |    NUMLOCK   |
-      &kp TAB       &kp Q            &kp W          &kp E         &kp R         &kp T                             &sys_reset   &trans      &kp UP      &trans          &kp C_AC_INS        &kp KP_NUM
-// |-----------|----------------|--------------|--------------|------------|------------|                       |------------|----------|-----------|-----------|-----------------------|--------------|
-// |   CTRL    |       A        |     S        |     D        |     F      |     G      |                       |   OUT TOG  |   "<-"   |     v     |   "->"    |      DecBright        |  IncBright   |
-    &kp LCTRL       &kp A            &kp S          &kp D          &kp F         &kp G                           &out OUT_TOG  &kp LEFT   &kp DOWN    &kp RIGHT      &kp C_BRI_DEC        &kp C_BRI_INC
-// |-----------|----------------|--------------|--------------|------------|------------|----------| |----------|------------|----------|-----------|-----------|-----------------------|--------------|
-// |   SHIFT   |     Z          |      X       |      C       |    V       |     B      |   SPACE  | |          |            |          |           |           |                       |   SFT OFF    |
-    &kp LSHIFT      &kp Z            &kp X          &kp C         &kp V       &kp B       &kp SPACE     &trans      &trans      &trans      &trans       &trans          &trans             &soft_off
-// |-----------|----------------|--------------|--------------|------------|------------|----------| |----------|------------|----------|-----------|-----------|-----------------------|--------------|
-//                                             |     CTRL     |   Super    |   Alt      |   ENTER  | |   SHIFT  |   Alt      |  Super   |    CTRL   |
-                                                   &kp LCTRL     &kp LGUI     &kp LALT     &trans     &kp RSHIFT  &kp RALT    &kp RGUI    &kp RCTRL
-//                                             |---------------------------------------------------| |----------------------------------------------|
+// |------------------------------------------------------------------------------------|                                     |--------------------------------------------------------------------------------------|
+// | MediaBack |   MediaPause   |   MediaFwd   |   Volume-    |    Mute    |   Volume+  |                                     |            | Clear BT |   BTNEXT  |           |                       |    RAISE     |
+    &kp C_PREV  &kp C_PLAY_PAUSE   &kp C_NEXT    &kp C_VOL_DN   &kp C_MUTE  &kp C_VOL_UP                                          &trans    &bt BT_CLR  &bt BT_NXT    &trans            &trans             &tog 2
+// |-----------|----------------|--------------|--------------|------------|------------|                                     |------------|----------|-----------|-----------|-----------------------|--------------|
+// |           |       Q        |     W        |      E       |     R      |     T      |                                     |   RESET    |          |    "^"    |           |         INS           |    NUMLOCK   |
+      &trans        &kp Q            &kp W          &kp E         &kp R         &kp T                                           &sys_reset   &trans      &kp UP      &trans          &kp C_AC_INS        &kp KP_NUM
+// |-----------|----------------|--------------|--------------|------------|------------|                                     |------------|----------|-----------|-----------|-----------------------|--------------|
+// |           |       A        |     S        |     D        |     F      |     G      |                                     |   OUT TOG  |   "<-"   |     v     |   "->"    |      DecBright        |  IncBright   |
+      &trans        &kp A            &kp S          &kp D          &kp F         &kp G                                         &out OUT_TOG  &kp LEFT   &kp DOWN    &kp RIGHT      &kp C_BRI_DEC        &kp C_BRI_INC
+// |-----------|----------------|--------------|--------------|------------|------------|----------------------| |------------|----------|-----------|-----------|-----------------------|--------------|--------|
+// |           |     Z          |      X       |      C       |    V       |     B      |      SCREENSHOT      | |  SFT OFF |            |          |           |           |                       |              |
+      &trans        &kp Z            &kp X          &kp C         &kp V       &kp B     &kp RG(RS(PRINTSCREEN))    &soft_off   &trans      &trans      &trans       &trans          &trans             &trans
+// |-----------|----------------|--------------|--------------|------------|------------|----------------------| |----------|------------|----------|-----------|-----------|-----------------------|--------------|
+//                                             |              |            |            |                      | |          |            |  ALT   |    CTRL   |
+                                                   &trans     &trans        &trans            &trans              &trans     &trans     &kp RALT   &kp RCTRL
+//                                             |---------------------------------------------------------------| |----------------------------------------------|
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
