@@ -87,7 +87,7 @@
       &trans  &trans  &rpi LGUI RG(RC(RS(LEFT))) &rpi LALT RG(RC(RS(UP))) &rpi LSHIFT RG(RC(RS(DOWN))) &rpi LSHIFT RG(RC(RS(RIGHT)))     &trans     &rpi RSHIFT KP_N4   &rpi RALT KP_N5 &rpi RGUI KP_N6  &rpi RCTRL KP_MULTIPLY &kp GRAVE
 // |---------|---------------|--------------------------|------------------------|-----------------|-------------|--------|  |--------|------------|--------------------|---------------|---------------|----------------|-----------------|
 // |         |               |       PREV COLUMN        |    PREV WORKSPACE      |    NEXT WKSPC   | NEXT COLUMN |        |  |        |            |         1          |      2        |      3        |       "/"      |                 |
-      &trans     &trans              &kp LG(LEFT)               &kp LG(UP)          &kp RG(DOWN)    &kp LG(RIGHT)  &trans      &trans    &trans          &kp KP_N1         &kp KP_N2       &lt 2 KP_N3   &lt 1 KP_DIVIDE     &trans
+      &trans     &trans              &kp LG(LEFT)               &kp LG(UP)          &kp RG(DOWN)    &kp LG(RIGHT)  &trans      &trans    &trans          &kp KP_N1         &kp KP_N2       &lt 2 KP_N3        &trans           &trans
 // |---------|---------------|--------------------------|------------------------|-----------------|-------------|--------|  |--------|------------|--------------------|---------------|---------------|----------------|-----------------|
 //                                                      |                        |                 |             |        |  |        |            |          0         |      "."      |
                                                                    &trans               &trans           &trans    &trans      &trans     &trans          &kp KP_N0        &kp KP_DOT
@@ -104,15 +104,15 @@
 // | MediaBack |   MediaPause   |   MediaFwd   |   Volume-    |    Mute    |   Volume+  |                                     |            | Clear BT |   BTNEXT  |           |                       |    RAISE     |
     &kp C_PREV  &kp C_PLAY_PAUSE   &kp C_NEXT    &kp C_VOL_DN   &kp C_MUTE  &kp C_VOL_UP                                          &trans    &bt BT_CLR  &bt BT_NXT    &trans            &trans             &tog 2
 // |-----------|----------------|--------------|--------------|------------|------------|                                     |------------|----------|-----------|-----------|-----------------------|--------------|
-// |           |       Q        |     W        |      E       |     R      |     T      |                                     |   RESET    |          |    "^"    |           |         INS           |    NUMLOCK   |
-      &trans        &kp Q            &kp W          &kp E         &kp R         &kp T                                           &sys_reset   &trans      &kp UP      &trans          &kp C_AC_INS        &kp KP_NUM
+// |           |       Q        |     W        |      E       |     R      |     T      |                                     |   RESET    |  Page Up |    "^"    | Page Down |         INS           |    NUMLOCK   |
+      &trans        &kp Q            &kp W          &kp E         &kp R         &kp T                                           &sys_reset    &PG_UP     &kp UP      &PG_DN         &kp C_AC_INS        &kp KP_NUM
 // |-----------|----------------|--------------|--------------|------------|------------|                                     |------------|----------|-----------|-----------|-----------------------|--------------|
 // |           |       A        |     S        |     D        |     F      |     G      |                                     |   OUT TOG  |   "<-"   |     v     |   "->"    |      DecBright        |  IncBright   |
       &trans        &kp A            &kp S          &kp D          &kp F         &kp G                                         &out OUT_TOG  &kp LEFT   &kp DOWN    &kp RIGHT      &kp C_BRI_DEC        &kp C_BRI_INC
-// |-----------|----------------|--------------|--------------|------------|------------|----------------------| |------------|----------|-----------|-----------|-----------------------|--------------|--------|
-// |           |     Z          |      X       |      C       |    V       |     B      |      SCREENSHOT      | |  SFT OFF |            |          |           |           |                       |              |
-      &trans        &kp Z            &kp X          &kp C         &kp V       &kp B     &kp RG(RS(PRINTSCREEN))    &soft_off   &trans      &trans      &trans       &trans          &trans             &trans
-// |-----------|----------------|--------------|--------------|------------|------------|----------------------| |----------|------------|----------|-----------|-----------|-----------------------|--------------|
+// |-----------|----------------|--------------|--------------|------------|------------|----------------------| |------------|----------|-----------|-----------|------------|-----------------------|--------------|
+// |           |     Z          |      X       |      C       |    V       |     B      |      SCREENSHOT      | |  SFT OFF |            |   Home    |           |   End      |                       |              |
+      &trans        &kp Z            &kp X          &kp C         &kp V       &kp B     &kp RG(RS(PRINTSCREEN))    &soft_off   &trans      &kp HOME      &trans     &lt 2 END           &trans              &trans
+// |-----------|----------------|--------------|--------------|------------|------------|----------------------| |------------|----------|-----------|-----------|------------|-----------------------|--------------|
 //                                             |              |            |            |                      | |          |            |  ALT   |    CTRL   |
                                                    &trans     &trans        &trans            &trans              &trans     &trans     &kp RALT   &kp RCTRL
 //                                             |---------------------------------------------------------------| |----------------------------------------------|
